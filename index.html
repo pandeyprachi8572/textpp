@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Test</title>
+  <title>Yogi Ji Carousel</title>
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   
@@ -24,7 +24,23 @@
       width: 100%;
       color: white;
       z-index: 1000;
-     background-color: #f26a21;
+      background-color: #f26a21;
+    }
+    
+    /* Enable hover dropdowns */
+    .navbar .dropdown:hover .dropdown-menu {
+      display: block;
+      background-color: rgb(255, 255, 255);
+    }
+    
+    .navbar .dropdown-menu {
+      margin-top: 0;
+      background-color: rgb(161, 1, 1);
+    }
+    
+    .navbar .dropdown-item:hover {
+      background-color:blue;
+      color: white;
     }
 .navbar-nav .nav-link {
   color: white !important;
@@ -112,15 +128,12 @@
       text-align: center;
       width: 460px;
     }
-
     .carousel-control-prev,
     .carousel-control-next {
       position: absolute;
       bottom: 50px;
       top: auto;
-  
     }
-
     .carousel-control-prev {
       left: 55%;
       transform: translateX(-120%);
@@ -149,7 +162,6 @@
       padding-right: 3%;
       padding-bottom: 30px;
     }
-
     @media (max-width: 768px) {
       .swiper {
         padding-left: 5%;
@@ -170,13 +182,11 @@
       transition: 0.5s;
       margin-bottom: 20px;
     }
-
     @media (max-width: 768px) {
       .swiper-slide {
         height: 350px;
       }
     }
-
     @media (max-width: 480px) {
       .swiper-slide {
         height: 300px;
@@ -188,7 +198,6 @@
       padding: 20px;
       text-align: start;
       color: #fff;
-      
       transition: 0.5s;
     }
     .card-hover {
@@ -197,7 +206,6 @@
       left: 0;
       width: 100%;
       height: 100%;
-      
       background: #f26a21;
       color: #fff;
       display: flex;
@@ -213,7 +221,6 @@
       padding-left: 10px;
       padding-bottom: 50%;
     }
-
     @media (max-width: 768px) {
       .card-hover i {
         font-size: 30px;
@@ -226,15 +233,12 @@
         font-size: 0.9rem;
       }
     }
-    .swiper-slide:hover .card-hover,
-    .swiper-slide.active .card-hover {
+    .swiper-slide:hover .card-hover {
       opacity: 1;
     }
-    .swiper-slide:hover .card-content,
-    .swiper-slide.active .card-content {
+    .swiper-slide:hover .card-content {
       opacity: 0;
     }
-
     /* Touch device styles */
     @media (hover: none) {
       .swiper-slide.active .card-hover {
@@ -256,7 +260,6 @@
       font-weight: bold;
       transition: 0.3s;
     }
-
     @media (max-width: 640px) {
       .btn {
         padding: 6px 8px;
@@ -274,8 +277,6 @@
       color: white;
       color: #fff;
     }
-
-
     .custom-btn {
     display: inline-flex;
     align-items: center;
@@ -289,7 +290,6 @@
     position: relative;
     overflow: hidden;
   }
-
   .icon-circle {
     background-color: #f26a21;
     border-radius: 50%;
@@ -336,8 +336,7 @@
 .custom-arrow {
   font-size: 2rem;
   color: black;
-  
-  background-color: white !important;
+  background-color: white;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -345,13 +344,12 @@
   align-items: center;
   justify-content: center;
   border: none;
-  
-  background-image: none !important;
 }
 .custom-arrow:hover {
   background-color: #f26a21 !important;
   color: white;
   cursor: pointer;
+  transform: scale(1.05);
 }
 .fixed-icon {
   position: fixed;
@@ -368,7 +366,6 @@
   width: 70px;
   height: 150px;
 }
-
 .fixed-icon .icon-circle {
   background-color: white;
   border-radius: 50%;
@@ -386,22 +383,20 @@
       bottom: 50%;
      align-items: center;
      text-align: center;
-}
-}
-  </style>
+}}
+</style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+<div class="container-fluid">
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link fw-bold" href="#"><i class="fas fa-home"></i></a>
             </li>
-            
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown">About Us</a>
               <ul class="dropdown-menu">
@@ -409,7 +404,6 @@
                 <li><a class="dropdown-item" href="#">Team</a></li>
               </ul>
             </li>
-            
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown">RAMP</a>
               <ul class="dropdown-menu">
@@ -417,7 +411,6 @@
                 <li><a class="dropdown-item" href="#">Initiatives</a></li>
               </ul>
             </li>
-          
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown">Schemes</a>
               <ul class="dropdown-menu">
@@ -501,9 +494,9 @@
         </div>
       </div>
     </div>
-    <div class="carousel-item">
-      <div class="carousel-bg" style="background-image: url('img/banner_1.jpg');"></div>
-      <div class="carousel-caption text-start">
+<div class="carousel-item">
+<div class="carousel-bg" style="background-image: url('img/banner_1.jpg');"></div>
+<div class="carousel-caption text-start">
         <h1>Empowering MSMEs Lorem ipsum dolor.</h1>
         <p>Bringing growth Accelerating MSME Performance by promoting Lorem ipsum dolor sit amet consectetur adipisicing elit. innovation and digitization opportunities across Uttar Pradesh. Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, perspiciatis!</p>
       </div>
@@ -548,9 +541,7 @@
       </div>
       <div class="card-hover">
         <i class="bi bi-star-fill"></i>
-
-        <h3>Heading 1</h3>
-       
+        <h3>Heading 1</h3>    
         <button class="readmore-btn">
           <span class="readmore-text">READ MORE</span>
           <span class="readmore-icon">
@@ -561,7 +552,6 @@
         </button>
       </div>
     </div>
-
     <!-- Slide 2 -->
     <div class="swiper-slide" style="background-image: url('img/banner_3.jpg');">
       <div class="card-content">
@@ -578,7 +568,6 @@
       <div class="card-hover">
         <i class="bi bi-star-fill"></i>
         <h3>Heading 2</h3>
-       
         <button class="readmore-btn">
           <span class="readmore-text">READ MORE</span>
           <span class="readmore-icon">
@@ -589,12 +578,10 @@
         </button>
       </div>
     </div>
-
     <!-- Slide 3 -->
     <div class="swiper-slide" style="background-image: url('img/banner_3.jpg');">
       <div class="card-content">
         <h2>Heading 3</h2>
-        
         <button class="custom-btn">
           READ MORE
           <span class="icon-circle">
@@ -607,7 +594,6 @@
       <div class="card-hover">
         <i class="bi bi-star-fill"></i>
         <h3>Heading 3</h3>
-       
         <button class="readmore-btn">
           <span class="readmore-text">READ MORE</span>
           <span class="readmore-icon">
@@ -660,8 +646,7 @@
       </div>
       <div class="card-hover">
         <i class="bi bi-star-fill"></i>
-        <h3>Heading 3</h3>
-       
+        <h3>Heading 3</h3> 
         <button class="readmore-btn">
           <span class="readmore-text">READ MORE</span>
           <span class="readmore-icon">
@@ -672,10 +657,8 @@
         </button>
       </div>
     </div>
-
   </div>
 </div>
-
 <!-- SwiperJS Script -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script>
@@ -686,7 +669,7 @@
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
-    },
+},
     breakpoints: {
       0: { 
         slidesPerView: 1,
@@ -695,11 +678,11 @@
       576: { 
         slidesPerView: 1.5,
         spaceBetween: 15 
-      },
+},
       768: { 
         slidesPerView: 2,
         spaceBetween: 20 
-      },
+},
       992: { 
         slidesPerView: 2.5,
         spaceBetween: 25 
@@ -719,9 +702,8 @@
         this.slides[this.activeIndex].classList.add('active');
       }
     }
-  });
+});
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
