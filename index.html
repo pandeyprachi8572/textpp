@@ -68,6 +68,7 @@
       position: absolute;
       bottom: 50%;
       left: 10%;
+      
       z-index: 2;
       animation: slideUp 1s ease forwards;
       opacity: 0;
@@ -82,7 +83,6 @@
   height: 100%;
   object-fit: cover;
 }
-
     @keyframes slideUp {
       from { transform: translateY(100px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
@@ -99,25 +99,25 @@
       padding: 10px;
       z-index: 3;
     }
-
     .leader-wrapper {
       position: absolute;
       bottom: 0;
       right: 0;
-    
       display: flex;
       flex-direction: column;
       align-items: center;
       z-index: 4;
     }
-
     .leader-img {
       height: 280px;
-    margin-right: -75px;
+      margin-right: -75px;
       margin-bottom: -10px;  
-          z-index: 1;
-        
-    }
+      z-index: 1;
+      transition: transform 0.3s ease;
+}
+    .leader-wrapper:hover .leader-img {
+      transform: scale(1.1);
+}
 
     .polygon-box {
       background-color: #f26a21;
@@ -336,7 +336,7 @@
 .custom-arrow {
   font-size: 2rem;
   color: black;
-  background-color: white;
+  background-color:white; /* Dark background */
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -344,9 +344,10 @@
   align-items: center;
   justify-content: center;
   border: none;
+  transition: all 0.3s ease;
 }
 .custom-arrow:hover {
-  background-color: #f26a21 !important;
+  background-color: #f26a21;
   color: white;
   cursor: pointer;
   transform: scale(1.05);
