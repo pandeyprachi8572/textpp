@@ -30,13 +30,13 @@
   color: white !important;
   font-weight: bold;
 }
-    .carousel-item {
+.carousel-item {
       height: 90vh;
       position: relative;
       background-size: cover;
       background-position: center;
 }
-    .carousel-bg {
+.carousel-bg {
       position: absolute;
       inset: 0;
       background-size: cover;
@@ -66,8 +66,6 @@
   height: 100%;
   object-fit: cover;
 }
-
-    
 
     @keyframes slideUp {
       from { transform: translateY(100px); opacity: 0; }
@@ -148,7 +146,15 @@
       width: 100%;
       padding-top: 5%;
       padding-left: 3%;
-      padding-right: 3%; 
+      padding-right: 3%;
+      padding-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .swiper {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
     }
     .swiper-slide {
       position: relative;
@@ -162,6 +168,19 @@
       align-items: flex-end;
       justify-content: center;
       transition: 0.5s;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .swiper-slide {
+        height: 350px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .swiper-slide {
+        height: 300px;
+      }
     }
     .card-content {
       position: absolute;
@@ -194,24 +213,61 @@
       padding-left: 10px;
       padding-bottom: 50%;
     }
-    .swiper-slide:hover .card-hover {
+
+    @media (max-width: 768px) {
+      .card-hover i {
+        font-size: 30px;
+        padding-bottom: 40%;
+      }
+      .card-hover h3 {
+        font-size: 1.2rem;
+      }
+      .card-hover p {
+        font-size: 0.9rem;
+      }
+    }
+    .swiper-slide:hover .card-hover,
+    .swiper-slide.active .card-hover {
       opacity: 1;
     }
-    .swiper-slide:hover .card-content {
+    .swiper-slide:hover .card-content,
+    .swiper-slide.active .card-content {
       opacity: 0;
+    }
+
+    /* Touch device styles */
+    @media (hover: none) {
+      .swiper-slide.active .card-hover {
+        opacity: 1;
+      }
+      .swiper-slide.active .card-content {
+        opacity: 0;
+      }
     }
     .btn {
       margin-top: 8px;
       margin-bottom: 4px;
-      padding:8px 10px;
+      padding: 8px 10px;
       background: #fff;
       color: #333;
-    
       border: none;
       border-radius: 25px;
       cursor: pointer;
       font-weight: bold;
       transition: 0.3s;
+    }
+
+    @media (max-width: 640px) {
+      .btn {
+        padding: 6px 8px;
+        font-size: 12px;
+      }
+      .readmore-btn {
+        padding: 6px 10px 6px 16px;
+      }
+      .readmore-icon {
+        padding: 8px;
+      }
     }
     .btn:hover {
       background:#f26a21;
@@ -405,8 +461,9 @@
     <div class="carousel-item active">
       <div class="carousel-bg" style="background-image: url('img/banner_2.jpg');"></div>
       <div class="carousel-caption text-start">
-        <h1>RAMP MSME Performance by promoting</h1>
-        <p>Accelerating MSME Performance by promoting innovation and digitizationby promoting innovation and digitization.</p>
+        <h1>RAMP jdf jhfj hsdf 
+        </h1>
+        <p>Accelerating MSME Performance by promoting Lorem ipsum dolor sit amet consectetur adipisicing elit. innovation and digitization.</p>
       </div>
       <div class="leader-wrapper">
         <img src="img/yogi.png" class="leader-img" alt="Yogi Adityanath" />
@@ -419,8 +476,8 @@
     <div class="carousel-item">
       <div class="carousel-bg" style="background-image: url('img/banner_3.jpg');"></div>
       <div class="carousel-caption text-start">
-        <h1>Empowering MSMEs MSME Performance by promoting</h1>
-        <p>Bringing growth opportunities across Uttar Pradesh. by promoting innovation and digitization</p>
+        <h1>Empowering MSMEs kjfkjdg jhgjdf h</h1>
+        <p>Bringing growth opportunities across Uttar Pradesh Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, quidem.</p>
       </div>
       <div class="leader-wrapper">
         <img src="img/yogi.png" class="leader-img" alt="Yogi Adityanath" />
@@ -433,8 +490,8 @@
     <div class="carousel-item">
       <div class="carousel-bg" style="background-image: url('img/banner_1 (2).jpg');"></div>
       <div class="carousel-caption text-start">
-        <h1>Empowering MSME MSME Performance by promotings</h1>
-        <p>Bringing growth opportunities across Uttar Pradesh.</p>
+        <h1>Empowering MSMEs jdshfj jhdsjf </h1>
+        <p>Bringing growth opportunities across Uttar Pradesh Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, eum..</p>
       </div>
       <div class="leader-wrapper">
         <img src="img/yogi.png" class="leader-img" alt="Yogi Adityanath" />
@@ -447,13 +504,13 @@
     <div class="carousel-item">
       <div class="carousel-bg" style="background-image: url('img/banner_1.jpg');"></div>
       <div class="carousel-caption text-start">
-        <h1>Empowering MSME MSME Performance by promotings</h1>
-        <p>Bringing growth opportunities across by promoting innovation and digitization Uttar Pradesh.</p>
+        <h1>Empowering MSMEs Lorem ipsum dolor sit amet.</h1>
+        <p>Bringing growth opportunities across Uttar Pradesh. Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, perspiciatis!</p>
       </div>
       <div class="leader-wrapper">
         <img src="img/yogi.png" class="leader-img" alt="Yogi Adityanath" />
         <div class="polygon-box">
-          <h5 class="mb-0 fw-bold">Yogi Adityanath</h5>   
+          <h5 class="mb-0 fw-bold">Yogi Adityanath</h5>
           <small>Hon’ble Chief Minister of Uttar Pradesh</small>
         </div>
       </div>
@@ -577,7 +634,6 @@
       <div class="card-hover">
         <i class="bi bi-star-fill"></i>
         <h3>Heading 3</h3>
-        <p> dfjdskfd hfjdhf jhdshf hjkds hfk hjdshfkjds hjkdjh</p>
         <button class="readmore-btn">
           <span class="readmore-text">READ MORE</span>
           <span class="readmore-icon">
@@ -632,9 +688,36 @@
       disableOnInteraction: false,
     },
     breakpoints: {
-      320: { slidesPerView: 1 },
-      640: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
+      0: { 
+        slidesPerView: 1,
+        spaceBetween: 15 
+      },
+      576: { 
+        slidesPerView: 1.5,
+        spaceBetween: 15 
+      },
+      768: { 
+        slidesPerView: 2,
+        spaceBetween: 20 
+      },
+      992: { 
+        slidesPerView: 2.5,
+        spaceBetween: 25 
+      },
+      1200: { 
+        slidesPerView: 3,
+        spaceBetween: 30 
+      },
+    },
+    on: {
+      touchStart: function() {
+        this.slides.forEach(slide => slide.classList.remove('active'));
+        this.slides[this.activeIndex].classList.add('active');
+      },
+      slideChange: function() {
+        this.slides.forEach(slide => slide.classList.remove('active'));
+        this.slides[this.activeIndex].classList.add('active');
+      }
     }
   });
 </script>
